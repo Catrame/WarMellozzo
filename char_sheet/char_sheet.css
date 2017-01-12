@@ -1,0 +1,138 @@
+
+/** ************************ **/
+/** 		HEADERS 		**/
+/** ************************ **/
+
+h1, h2, h3 {
+	color: white;
+	background-color: black;
+	margin: 0px;
+}
+
+h1 {
+	font-size: 28px;
+}
+
+h2 {
+	font-size: 24px;
+}
+
+h3 {
+	font-size: 20px;
+}
+
+/** ************************ **/
+/** 	HTML ELEMENTS 		**/
+/** ************************ **/
+
+label {
+  display: inline-block;
+  width: 100px;
+  text-align: right;
+}
+
+table tr td {
+	/*border-bottom: 1px solid black; */
+}
+
+/** ************************ **/
+/** 		CLASSES	 		**/
+/** ************************ **/
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+div.box {
+	border: 1px solid grey;
+}
+
+div.bottomSeparator {
+	border-bottom: 1px solid grey;
+}
+
+div.sheet_content {
+	font-family: courier;
+	font-size: 14px;
+}
+
+div.column {
+	float: left; 
+	margin: 0px 5px 0px 0px;	/* top right bottom left */
+}
+
+table.table_numbers input {
+	width: 30px;
+}
+
+/** ************************ **/
+/** 	CONTAINERS	 		**/
+/** ************************ **/
+
+#sheet_upper {
+    margin-top: 25px;
+}
+
+#sheet_central {
+    margin-top: 25px;
+}
+#sheet_weapons {
+	margin-top: 25px;
+}
+#sheet_down {
+    margin-top: 25px;
+}
+
+#box_careers {
+	margin-left: 50px;
+}
+
+#general_info{
+	text-align: center;
+	/* border: 1px solid black; */
+	width: 1000px;
+	padding-bottom: 15px;
+}
+
+#footer {
+	width: 100%;
+	padding: 50px 0px;
+}
+
+#btn_save {
+	float: right; 
+	margin-right: 25px;
+}
+
+#btn_load {
+	float: right; 
+	margin-right: 25px;
+}
+#btn_save_top {
+	float: left; 
+	margin-left: 25px;
+}
+
+#btn_load_top {
+	float: left; 
+	margin-left: 25px;
+}
+
+/** ************************ **/
+/** 		TABLES	 		**/
+/** ************************ **/
+
+#table_profile_1 {
+	border: 1px solid grey;
+}
+
+#table_profile_2 {
+	margin-top: 25px;
+	border: 1px solid grey;
+}
+
+#table_money input {
+	width: 50px;
+}

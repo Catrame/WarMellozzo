@@ -1,0 +1,126 @@
+<html>
+	<head>
+		<meta name="description" content="Free Warhammer roleplay character sheet">
+		<meta name="keywords" content="WARHAMMER,CHARACTER,ROLEPLAY,FANTASY, FREE">
+		<meta name="author" content="Giampaolo Saporito">
+		<link rel="stylesheet" href="char_sheet.css" /> 
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script type="text/javascript" src="char_sheet.js"></script>
+		<title>Elk The Wind - FREE WARHAMMER ROLEPLAY</title>
+	</head>
+	<body>
+	<form name="character_form" id="character_form" onsubmit="event.preventDefault();" enctype="application/json" >
+		<div id="header">
+			<div id="divlogin"><a href="http://elkthewind.96.lt/login.html">Login</a></div>
+			<div id="divlogout" class="clearfix"><a href="http://elkthewind.96.lt/logout.php">Logout</a></div>
+			<div class="column" style="width:60%;"></div> 
+			<div id="box_user" class="column">
+				Hello user.			
+			</div>
+			<div id="btnTopContainer" class="clearfix">
+				<button id="btn_load_top" onclick="onLoadButton()"> LOAD </button>
+				<button id="btn_save_top" onclick="onSaveButton()"> SAVE </button>
+			</div>
+			<div class="clearfix"></div>
+			<h2 id="htitle"> WARHAMMER FANTASY ROLEPLAY </h2>
+		</div>
+		<div id="sheet_upper" class="sheet_content">
+			<div id="general_info" class="clearfix bottomSeparator" >
+				<div class="column">
+					<h3> CHARACTER </h3>
+					<label>Name</label> <input type="text" id="name" name="name" /></br>
+					<label>Race</label> <input type="text" id="race" name="race" /></br>
+					<label>Total Exp</label> <input type="text" id="exp_total" name="exp_total" /></br>
+					<label>Current Exp</label> <input type="text" id="exp_current" name="exp_current" /></br> 
+				</div>
+				<div class="column" >
+					<h3> PERSONAL DETAILS </h3>
+					<div class="column" >
+						<label>Gender</label> <input type="text" id="gender" name="gender" ></br>
+						<label>Age</label> <input type="text" id="age" name="age" ></br>
+						<label>Height</label> <input type="text" id="height" name="xx" ></br>
+						<label>Weight</label> <input type="text" id="weight" name="xx"></br>
+					</div>
+					<div class="column">
+						<label>Eyes</label> <input type="text" id="eyes" name="eyes"></br>
+						<label>Hair</label> <input type="text" id="hair" name="hair"></br>
+						<label>Birthplace</label> <input type="text" id="birthplace" name="birthplace"></br>
+						<label>Marks</label> <input type="text" id="distinguishing_marks" name="distinguishing_marks"></br>
+					</div>
+				</div> 
+			</div>
+			<div style="margin-top: 25px;">
+				<div class="column" >
+					<table id="table_profile_1" class="table_numbers">
+					</table>
+					<table id="table_profile_2" class="table_numbers">
+					</table>
+				</div>
+				<div id="box_careers" class="column" >
+					<h3>CAREER</h3>
+					<div>current career</div>
+					<input type="text" id="career_current" name="career_current" >
+					<div>career exits</div>
+					<textarea id="career_exits" name="career_exits" cols="25" rows="5"></textarea>
+					<div>previous careers</div>
+					<textarea id="career_previous" name="career_previous" cols="25" rows="3"></textarea>
+				</div>
+			</div>
+		</div>
+		<div class="clearfix">
+		</div>
+		<div id="sheet_central" class="sheet_content">
+			<div class="column">
+				<h3>ARMOUR</h3> 
+				<table id="table_armour" class="table_numbers">
+				</table> 
+			</div>
+			<div class="column">
+				<h3>SKILLS</h3> 
+				<table id="table_skills">
+				</table> 
+			</div>
+			<div class="column">
+				<h3>TALENTS</h3>
+				<table id="table_talents">
+				</table> 
+			</div>
+		</div>
+		<div class="clearfix">
+		</div>
+		<div id="sheet_weapons" class="sheet_content">
+			<div class="column">
+				<h3>WEAPONS</h3> 
+				<table id="table_weapons" >
+				</table> 
+			</div>
+		</div>
+		<div class="clearfix">
+		</div>
+		<div id="sheet_down" class="sheet_content">
+			<div class="column">
+				<h3>ITEMS</h3> 
+				<table id="table_trappings" >
+				</table> 
+			</div>
+			<div class="column">
+				<h3>MONEY</h3> 
+				<table id="table_money" >
+				</table> 
+			</div>
+			
+		</div>
+		<div class="clearfix">
+		</div>
+		<div id="footer">
+			<button id="btn_save" onclick="onSaveButton()"> SAVE </button>
+			<button id="btn_load" onclick="onLoadButton()"> LOAD </button>
+		</div>
+		<div class="clearfix">
+		</div>
+		<div id="div_messages">
+		</div>
+	</form>
+	</body>
+
+</html>

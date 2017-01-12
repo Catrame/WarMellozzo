@@ -580,7 +580,33 @@ function loaddataFromJSON_obj( jsonObj )
 /** 	get data from JSON	*/
 /** ************************ */
 
+/** ************************ */
+/** 	get data from JSON	*/
+/** ************************ */
 
+function fillGeneralInfo_fromJSON( jsonObj )
+{
+    // *** general info
+    $("#name").val( jsonObj["name"] );
+    $("#race").val( jsonObj.race );
+    $("#exp_total").val( jsonObj.exp_total );
+    $("#exp_current").val( jsonObj.exp_current );
+
+    // *** personal details
+    $("#gender").val( jsonObj.gender );
+    $("#age").val( jsonObj.age );
+    $("#height").val( jsonObj.height );
+    $("#weight").val( jsonObj.weight );
+    $("#eyes").val( jsonObj.eyes );
+    $("#hair").val( jsonObj.hair );
+    $("#birthplace").val( jsonObj.birthplace );
+    $("#distinguishing_marks").val( jsonObj.distinguishing_marks );
+
+    // *** career
+    $("#career_current").val( jsonObj.career_current );
+    $("#career_exits").val( jsonObj.career_exits );
+    $("#career_previous").val( jsonObj.career_previous );
+}
 
 function fill_mk1_values_fromJSON( jsonObj )
 {

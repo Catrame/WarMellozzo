@@ -580,29 +580,7 @@ function loaddataFromJSON_obj( jsonObj )
 /** 	get data from JSON	*/
 /** ************************ */
 
-function fillGeneralInfo_fromJSON( jsonObj )
-{
-	// *** general info
-	$("#name").val( jsonObj["name"] );
-	$("#race").val( jsonObj.race );
-	$("#exp_total").val( jsonObj.exp_total );
-	$("#exp_current").val( jsonObj.exp_current );
 
-	// *** personal details
-	$("#gender").val( jsonObj.gender );
-	$("#age").val( jsonObj.age );
-	$("#height").val( jsonObj.height );
-	$("#weight").val( jsonObj.weight );
-	$("#eyes").val( jsonObj.eyes );
-	$("#hair").val( jsonObj.hair );
-	$("#birthplace").val( jsonObj.birthplace );
-	$("#distinguishing_marks").val( jsonObj.distinguishing_marks );
-
-	// *** career
-	$("#career_current").val( jsonObj.career_current );
-	$("#career_exits").val( jsonObj.career_exits );
-	$("#career_previous").val( jsonObj.career_previous );
-}
 
 function fill_mk1_values_fromJSON( jsonObj )
 {
@@ -728,3 +706,53 @@ function fill_weapons_values_fromJSON( jsonObj )
 }
 
 
+function onGenButton(){
+    fillRandomInfo( );
+    fill_random_mk1_values();
+}
+function fill_random_mk1_values()
+{
+    var num_rows = 3;
+    var num_col = skills_mk1.length;
+    for(var r=0; r < num_rows; r++)
+    {
+        for(c=0; c < num_col; c++)
+        {
+
+            var input_name ="skill_"+skills_mk1[c]+"_"+r;
+            if (r===0){
+                $("#"+input_name).val(20);
+            }
+            if (r===1){
+                $("#"+input_name).val(Math.floor(Math.random() * 10) + 2 + Math.floor(Math.random() * 10));
+            }
+            if (r===2){
+                $("#"+input_name).val(parseInt(($("#skill_"+skills_mk1[c]+"_"+0).val())) + parseInt(($("#skill_"+skills_mk1[c]+"_"+1).val())));
+            }
+        }
+    }
+}
+function fillRandomInfo(  )
+{
+    // *** general info
+    $("#name").val( "ugo" );
+    $("#race").val( "human" );
+    $("#exp_total").val(Math.floor(Math.random() * 9990) + 10);
+    $("#exp_current").val( Math.floor(Math.random() * 990) + 10 );
+    $rand = Math.floor(Math.random()*2);
+
+    // *** personal details
+    $("#gender").val( $rand === 1 ? "Male": "Female" );
+    $("#age").val( Math.floor(Math.random() * 25) + 15 + " years") ;
+    $("#height").val(( 150+(Math.floor(Math.random() * 10) + 1)*2.5)+ " cm");
+    $("#weight").val((Math.floor(Math.random() * 115) + 105)/2 + " kg");
+    $("#eyes").val( "neri" );
+    $("#hair").val( "neri" );
+    $("#birthplace").val( "acqui terme" );
+    $("#distinguishing_marks").val( "nothing" );
+
+    // *** career
+    $("#career_current").val( "Hero" );
+    $("#career_exits").val( "A lot" );
+    $("#career_previous").val( "Nothing" );
+}
